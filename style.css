@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --accent-color: #8b5cf6;
+  --accent-secondary: #06b6d4;
+  --danger-color: #ff4d6d;
+  --text-color: #1f1b2e;
+  --input-bg: rgba(255,255,255,0.7);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 30%, #8b5cf6, transparent 40%),
+              radial-gradient(circle at 80% 70%, #06b6d4, transparent 40%),
+              #0f0c29;
+  overflow: hidden;
+}
+
+
+body::before{
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #8b5cf6;
+  filter: blur(200px);
+  opacity: 0.25;
+  top: -200px;
+  left: -200px;
+}
+
+.wrapper{
+  position: relative;
+  width: min(420px, 90%);
+  padding: 45px 35px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 
+    0 0 40px rgba(139,92,246,0.4),
+    0 20px 60px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1{
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+form{
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > div{
+  display: flex;
+  width: 100%;
+}
+
+
+form label{
+  height: 55px;
+  width: 55px;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  fill: white;
+  transition: 0.3s ease;
+}
+
+
+form input{
+  flex: 1;
+  height: 55px;
+  border: none;
+  padding: 0 18px;
+  font: inherit;
+  border-radius: 0 15px 15px 0;
+  background: var(--input-bg);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+form input:focus{
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 2px var(--accent-color),
+              0 0 15px rgba(139,92,246,0.5);
+}
+
+
+div:has(input:focus) > label{
+  box-shadow: 0 0 20px rgba(139,92,246,0.7);
+  transform: scale(1.05);
+}
+
+form input::placeholder{
+  color: #555;
+}
+
+
+form button{
+  margin-top: 15px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(139,92,246,0.5);
+}
+
+form button:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(139,92,246,0.7);
+}
+
+form button:active{
+  transform: scale(0.97);
+}
+
+
+p{
+  margin-top: 20px;
+  color: rgba(255,255,255,0.8);
+}
+
+a{
+  color: #06b6d4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
+form div.incorrect label{
+  background: var(--danger-color);
+}
+
+form div.incorrect input{
+  box-shadow: 0 0 0 2px var(--danger-color);
+}
+
+#error-message{
+  color: var(--danger-color);
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 0.9rem;
+}
+
+
+@media(max-width: 480px){
+  .wrapper{
+    padding: 35px 20px;
+  }
+}

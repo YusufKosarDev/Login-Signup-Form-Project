@@ -1,4 +1,4 @@
-**Login & Signup Form Project**
+# Login & Signup Form Project
 
 
 A modern, responsive authentication UI featuring real-time client-side validation and dynamic error handling.
@@ -11,7 +11,7 @@ User Login Form
 Interactive Validation System
 Modern Glassmorphism UI Design
 
-**📝 What Does It Do?**
+## 📝 What Does It Do?
 
 
 This project provides two authentication interfaces:
@@ -34,7 +34,7 @@ This project provides two authentication interfaces:
 
 Both forms provide instant visual feedback by highlighting incorrect fields and clearing errors while the user types.
 
-**⚙️ How Does It Work?**
+## ⚙️ How Does It Work?
 
 
 Shared JavaScript File:
@@ -55,7 +55,7 @@ An input event listener removes error styling immediately when the user starts c
 Pure Frontend Implementation:
 Built using only HTML, CSS, and Vanilla JavaScript. No external libraries or frameworks.
 
-**🎨 UI Features**
+## 🎨 UI Features
 
 
 Modern gradient background
@@ -64,7 +64,7 @@ Animated transitions and hover effects
 Responsive layout
 SVG icons embedded directly inside the form
 
-**🎓 What I Learned?**
+## 🎓 What I Learned?
 
 
 Form validation logic and error handling patterns.
@@ -80,4 +80,4 @@ Improving user experience with real-time validation feedback.
 Building a clean and responsive authentication interface without frameworks.
 
 
-**🚀 Live Demo**: https://yusufkosardev.github.io/Login-Signup-Form-Project/
+### 🚀 Live Demo: https://yusufkosardev.github.io/Login-Signup-Form-Project/
